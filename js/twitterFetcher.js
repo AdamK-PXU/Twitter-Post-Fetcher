@@ -91,7 +91,7 @@
       return decodeURIComponent(data_src) + '.jpg';
     }
   }
- 
+
 
   var twitterFetcher = {
     fetch: function(config) {
@@ -221,7 +221,11 @@
 
       function swapDataSrc(element) {
         var avatarImg = element.getElementsByTagName('img')[0];
-        avatarImg.src = avatarImg.getAttribute('data-src-2x');
+
+        if (avatarImg && avatarImg.length) {
+          avatarImg.src = avatarImg.getAttribute('data-src-2x');
+        }
+
         return element;
       }
 
