@@ -87,7 +87,7 @@
 
   function extractImageUrl(image_data) {
     if (image_data !== undefined && image_data.innerHTML.indexOf('data-image') >= 0) {
-      var data_src = image_data.innerHTML.match(/data-image=\"([A-z0-9]+:\/\/[A-z0-9]+\.[A-z0-9]+\.[A-z0-9]+\/[A-z0-9]+\/[A-z0-9\-]+)/i)[1];
+      var data_src = image_data.innerHTML.split('data-image="')[1].split('"')[0];
       return decodeURIComponent(data_src) + '.jpg';
     }
   }
