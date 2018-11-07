@@ -1,4 +1,7 @@
+
+/* eslint-disable */
 /*********************************************************************
+ * @license
 *  #### Twitter Post Fetcher v17.0.3 ####
 *  Coded by Jason Mayes 2015. A present to all the developers out there.
 *  www.jasonmayes.com
@@ -35,6 +38,7 @@
   var customCallbackFunction = null;
   var showInteractionLinks = true;
   var showImages = false;
+  var showReplies = false;
   var useEmoji = false;
   var targetBlank = true;
   var lang = 'en';
@@ -122,6 +126,9 @@
       if (config.showImages === undefined) {
         config.showImages = false;
       }
+      if (config.showReplies === undefined) {
+        config.showReplies = false;
+      }
       if (config.useEmoji === undefined) {
         config.useEmoji = false;
       }
@@ -150,7 +157,8 @@
         customCallbackFunction = config.customCallback;
         showInteractionLinks = config.showInteraction;
         showImages = config.showImages;
-	useEmoji = config.useEmoji;
+        showReplies = config.showReplies;
+        useEmoji = config.useEmoji;
         targetBlank = config.linksInNewWindow;
         permalinks = config.showPermalinks;
         dataOnly = config.dataOnly;
@@ -171,6 +179,7 @@
           script.src = 'https://syndication.twitter.com/timeline/profile?' +
               'callback=__twttrf.callback&dnt=false' +
               '&screen_name=' + config.profile.screenName +
+              '&with_replies=' + showReplies +
               '&suppress_response_codes=true&lang=' + (config.lang || lang) +
               '&rnd=' + Math.random();
         } else if (config.likes !== undefined) {
@@ -431,4 +440,3 @@
   window.twitterFetcher = twitterFetcher;
   return twitterFetcher;
 }));
-

@@ -1,7 +1,17 @@
 {
   "name": "twitter-fetcher",
   "version": "17.0.3",
-  "keywords": ["Twitter", "OAUTH", "JavaScript", "tweets", "api", "widget"],
+  "keywords": [
+    "Twitter",
+    "OAUTH",
+    "JavaScript",
+    "tweets",
+    "api",
+    "widget"
+  ],
+  "scripts": {
+    "minify": "uglifyjs js/twitterFetcher.js --compress --mangle --comments --output js/twitterFetcher_min.js"
+  },
   "description": "Fetch your twitter posts without using the new Twitter 1.1 API. Pure JavaScript!",
   "author": "Jason Mayes",
   "main": "js/twitterFetcher_min.js",
@@ -12,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/jasonmayes/Twitter-Post-Fetcher/issues"
   },
-  "homepage": "https://github.com/jasonmayes/Twitter-Post-Fetcher"
+  "homepage": "https://github.com/jasonmayes/Twitter-Post-Fetcher",
+  "devDependencies": {
+    "uglify-js": "^3.4.9"
+  }
 }
