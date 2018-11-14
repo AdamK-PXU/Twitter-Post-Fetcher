@@ -5,6 +5,8 @@ Allows you to get your tweets displaying on your website using JavaScript, witho
 
 Further information and project page: http://jasonmayes.com/projects/twitterApi/
 
+Latest version: 18.0.3 - ensure you are using the latest version to avoid issues!
+
 ## Why does this exist?
 
 Recently I was quite frustrated to find out that the old API on Twitter was depreciated and the overhead in setting up a system to perform OAUTH just to get my already publicly available tweets was too damn high (see https://dev.twitter.com/discussions/11564).

@@ -1,14 +1,7 @@
 {
   "name": "twitter-fetcher",
-  "version": "17.1.0",
-  "keywords": [
-    "Twitter",
-    "OAUTH",
-    "JavaScript",
-    "tweets",
-    "api",
-    "widget"
-  ],
+  "version": "18.0.2",
+  "keywords": ["Twitter", "OAUTH", "JavaScript", "tweets", "api", "widget"],
   "scripts": {
     "minify": "uglifyjs js/twitterFetcher.js --compress --mangle --comments --output js/twitterFetcher_min.js"
   },
