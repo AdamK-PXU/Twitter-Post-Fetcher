@@ -1,6 +1,9 @@
 {
-  "name": "twitter-fetcher",
+  "name": "@pixelunion/twitter-fetcher",
   "version": "17.1.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [
     "Twitter",
     "OAUTH",
@@ -10,19 +13,14 @@
     "widget"
   ],
   "scripts": {
-    "minify": "uglifyjs js/twitterFetcher.js --compress --mangle --comments --output js/twitterFetcher_min.js"
+    "minify": "uglifyjs js/twitterFetcher.js --compress --mangle --comments --output js/twitterFetcher_min.js",
+    "prepare": "npm run minify"
   },
   "description": "Fetch your twitter posts without using the new Twitter 1.1 API. Pure JavaScript!",
   "author": "Jason Mayes",
   "main": "js/twitterFetcher_min.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jasonmayes/Twitter-Post-Fetcher.git"
-  },
-  "bugs": {
-    "url": "https://github.com/jasonmayes/Twitter-Post-Fetcher/issues"
-  },
-  "homepage": "https://github.com/jasonmayes/Twitter-Post-Fetcher",
+  "repository": "github:pixelunion/Twitter-Post-Fetcher",
+  "homepage": "https://github.com/pixelunion/Twitter-Post-Fetcher",
   "devDependencies": {
     "uglify-js": "^3.4.9"
   }
